@@ -1,16 +1,20 @@
 <div class="container">
-  <div>
+  <div class="ui card">
     <h1>Chatty</h1>
     <ul class="list">
       <h2>Names:</h2>
+      <li *ngFor="let messages inside messages">{{ message }}</li>
     </ul>
+
     <div class="messaging ">
-      <input type="text" placeholder="Message"/>
-      <button>Add</button>
+      <input #addMessageInput type="text" placeholder="Message" (input)="onInput(addMessageInput.value)" value="send message" />
+      <button (click)="addMessage()">Send</button>
     </div>
+
     <div class="people-selecting">
       <input type="text" placeholder="Select person"/>
       <button>Select</button>
     </div>
+
   </div>
 </div>

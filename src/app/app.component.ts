@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'the angular app';
+  newMessage = "";
+  messages: string[] = [];
+
+  onInput(message: string){
+    this.newMessage = message;
+    console.log(this.newMessage);
+  }
+
+  addMessage(){
+    this.messages.push(this.newMessage);
+    this.newMessage = "";
+    console.log(this.messages);
+    +
+  }
 }
