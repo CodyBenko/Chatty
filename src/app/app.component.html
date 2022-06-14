@@ -7,14 +7,15 @@
     </ul>
 
     <div class="messaging ">
-      <input #addMessageInput type="text" placeholder="Message" (input)="onInput(addMessageInput.value)" value="send message" />
+      <input #addMessageInput type="text" placeholder="Message" (input)="onInput(addMessageInput.value)" [value]="send message" [class]="send message" />
       <button (click)="addMessage()">Send</button>
     </div>
 
     <div class="people-selecting">
-      <input type="text" placeholder="Select person"/>
+      <input #personSelected type="text" placeholder="Select person" (input)="onMessagesOfInput(personSelected.value)" [value]="send message"/>
       <button>Select</button>
     </div>
 
+    <p *ngIf="errorMessage" class="error-msg">{{ errorMessage }}</p>
   </div>
 </div>
