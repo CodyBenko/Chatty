@@ -12,10 +12,15 @@
     </div>
 
     <div class="people-selecting">
-      <input #personSelected type="text" placeholder="Select person" (input)="onMessagesOfInput(personSelected.value)" [value]="send message"/>
-      <button>Select</button>
+      <input #personSelectedInput type="text" placeholder="Select person" (input)="onpersonSelectedInput(personSelected.value)" [value]="personSelected"/>
+      <button (click)="selectingaPerson()">Select</button>
     </div>
 
     <p *ngIf="errorMessage" class="error-msg">{{ errorMessage }}</p>
+  </div>
+  <div *ngIfclass="person-container">
+  <div class="person-container">
+    <h3>Person: {{name}}</h3>
+  </div>
   </div>
 </div>
