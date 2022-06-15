@@ -9,11 +9,16 @@ export class AppComponent {
   newMessage = "";
   messages: string[] = [];
   errorMessage = "";
+  personSelected = "";
 
 
   onInput(message: string){
     this.newMessage = message;
 
+  }
+
+  onpersonSelectedInput(value: string){
+    this.personSelected = value;
   }
 
   addMessage(){
@@ -26,5 +31,10 @@ return;
     this.errorMessage = "Name cant be empty";
     this.messages.push(this.newMessage);
     this.newMessage = "";
+  }
+
+  selectingaPerson(!this.personSelected){
+  this.errorMessage = "Name not found";
+  return;
   }
 }

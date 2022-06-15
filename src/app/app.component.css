@@ -69,3 +69,12 @@ li{
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
 }
+
+.person-container{
+  margin-bottom: 1rem;
+}
+
+.person-container ul{
+  border: 0.1rem solid rgba(128, 128, 128, 0.418);
+  margin: 0;
+}
